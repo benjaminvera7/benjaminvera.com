@@ -29,40 +29,11 @@
   margin: -75px 0 0 -75px;
   border: 16px solid #f3f3f3;
   border-radius: 50%;
-  border-top: 16px solid #3498db;
+  border-top: 16px solid #009688;
   width: 120px;
   height: 120px;
   -webkit-animation: spin 2s linear infinite;
   animation: spin 2s linear infinite;
-}
-
-@-webkit-keyframes spin {
-  0% { -webkit-transform: rotate(0deg); }
-  100% { -webkit-transform: rotate(360deg); }
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-/* Add animation to "page content" */
-.animate-bottom {
-  position: relative;
-  -webkit-animation-name: animatebottom;
-  -webkit-animation-duration: 1s;
-  animation-name: animatebottom;
-  animation-duration: 1s
-}
-
-@-webkit-keyframes animatebottom {
-  from { bottom:-100px; opacity:0 } 
-  to { bottom:0px; opacity:1 }
-}
-
-@keyframes animatebottom { 
-  from{ bottom:-100px; opacity:0 } 
-  to{ bottom:0; opacity:1 }
 }
 
 #myDiv {
@@ -75,10 +46,10 @@
 
   <div id="loader"></div>
   <!-- Page Container -->
-  <div class="w3-content w3-margin-top animate-bottom" style="display: none; max-width:1400px; position:relative; text-align: left" id="myDiv">
+  <div class="w3-content w3-margin-top w3-animate-opacity" style="display: none; max-width:1400px; position:relative; text-align: left" id="myDiv">
     <video autoplay preload loop id="ocean" type='video/mp4'
       style="z-index: -1;object-fit: cover; left:50%; position:fixed; top:50%; transform:translate(-50%,-50%); min-width:100%; min-height:100%"></video>
-    <audio controls autoplay loop style="display:none;" id="waves">
+    <audio controls loop style="display:none;" id="waves">
       <source src="/images/waves.mp3" type="audio/mpeg">
     </audio>
     <!-- The Grid -->
@@ -336,6 +307,7 @@
 <script>
   var req = new XMLHttpRequest();
   var video = document.getElementById('ocean');
+  var audio = document.getElementById('waves');
   req.open('GET', '/images/ocean.mp4', true);
   req.responseType = 'blob';
 
@@ -351,6 +323,7 @@
       document.getElementById("loader").style.display = "none";
       document.getElementById("myDiv").style.display = "block";
       document.getElementById("footer").style.display = "block";
+      audio.play();
     }
   }
   req.onerror = function () {
