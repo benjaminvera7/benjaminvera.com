@@ -18,35 +18,65 @@
     font-family: "Roboto", sans-serif
   }
 
-  /* Center the loader */
-#loader {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  z-index: 1;
-  width: 150px;
-  height: 150px;
-  margin: -75px 0 0 -75px;
-  border: 16px solid #f3f3f3;
-  border-radius: 50%;
-  border-top: 16px solid #009688;
-  width: 120px;
-  height: 120px;
-  -webkit-animation: spin 2s linear infinite;
-  animation: spin 2s linear infinite;
-}
+  li,
+  i {
+    padding: 4px 0;
+  }
 
-#myDiv {
-  display: none;
-  text-align: center;
-}
+  * {
+    cursor: url(https://cur.cursors-4u.net/toons/too-11/too1009.ani), url(http://cur.cursors-4u.net/toons/too-11/too1009.png), auto !important;
+  }
+
+  /* Center the loader */
+  #loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #009688;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+  }
+
+  #myDiv {
+    display: none;
+    text-align: center;
+  }
+
+  @-webkit-keyframes spin {
+    0% {
+      -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
 </style>
 
 <body class="w3-light-grey">
 
   <div id="loader"></div>
   <!-- Page Container -->
-  <div class="w3-content w3-margin-top w3-animate-opacity" style="display: none; max-width:1400px; position:relative; text-align: left" id="myDiv">
+  <div class="w3-content w3-margin-top w3-animate-opacity"
+    style="display: none; max-width:1400px; position:relative; text-align: left" id="myDiv">
     <video autoplay preload loop id="ocean" type='video/mp4'
       style="z-index: -1;object-fit: cover; left:50%; position:fixed; top:50%; transform:translate(-50%,-50%); min-width:100%; min-height:100%"></video>
     <audio controls loop style="display:none;" id="waves">
@@ -144,6 +174,16 @@
               <li><i class="fa-li fa fa-square" style="color:#FAEADD"></i></i>Clients included Atlassian, Whole Foods,
                 Polycom, AXA, and more</li>
             </ul>
+            <button onclick="myFunction('springbox')" class="w3-button w3-block w3-center-align"><i
+                class="fa fa-caret-down"></i></button>
+            <div id="springbox" class="w3-container w3-hide w3-margin">
+              <div class="w3-container  w3-cell w3-mobile">
+                <img src="/images/poly1.jpg" class="w3-border w3-padding" style="width:100%">
+              </div>
+              <div class="w3-container w3-cell w3-mobile">
+                <img src="/images/poly2.jpg" class="w3-border w3-padding" style="width:100%">
+              </div>
+            </div>
             <hr>
           </div>
           <!-- modular -->
@@ -162,6 +202,13 @@
                 library using React,
                 Styled-Component and Storybook</li>
             </ul>
+            <button onclick="myFunction('modular')" class="w3-button w3-block w3-center-align"><i
+                class="fa fa-caret-down"></i></button>
+            <div id="modular" class="w3-container w3-hide w3-margin">
+              <div class="w3-container  w3-cell w3-mobile">
+                <img src="/images/modular.png" class="w3-border w3-padding" style="width:100%" />
+              </div>
+            </div>
             <hr>
           </div>
           <!-- santanna -->
@@ -235,8 +282,6 @@
           </div>
         </div><br>
 
-        <!-- https://www.semanticscholar.org/paper/HISTOGRAMS-OF-ORIENTED-GRADIENTS-AND-EIGENFACE-CUES-Qi-Vera/705e76bdd528ac77c8f4550bde291e0311a804f4#references -->
-
         <div class="w3-container w3-card w3-white">
           <h2 class="w3-text-grey w3-padding-16"><i
               class="fa fa-gear fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Projects</h2>
@@ -246,6 +291,25 @@
             <h6 class="w3-text-teal"><i class="fa fa-database fa-fw w3-margin-right"></i>React/Node/MongoDB/PayPal/Web3
             </h6>
             <p>Bachelor of Science in Computer Science</p>
+            <button onclick="myFunction('et')" class="w3-button w3-block w3-center-align"><i
+                class="fa fa-caret-down"></i></button>
+            <div id="et" class="w3-container w3-hide w3-margin">
+              <div class="w3-container w3-mobile w3-margin-bottom">
+                <img src="/images/et1.png" class="w3-border w3-padding" style="width:100%" />
+              </div>
+              <div class="w3-container w3-mobile">
+                <img src="/images/et2.png" class="w3-border w3-padding" style="width:100%" />
+              </div>
+              <div class="w3-container w3-mobile">
+                <img src="/images/et3.png" class="w3-border w3-padding" style="width:100%" />
+              </div>
+              <div class="w3-container w3-mobile">
+                <img src="/images/et4.png" class="w3-border w3-padding" style="width:100%" />
+              </div>
+              <div class="w3-container w3-mobile">
+                <img src="/images/et5.png" class="w3-border w3-padding" style="width:100%" />
+              </div>
+            </div>
             <hr>
           </div>
 
@@ -254,6 +318,12 @@
             <h6 class="w3-text-teal"><i class="fa fa-database fa-fw w3-margin-right"></i>EJS/Node/oAuth/Google
               API/Stripe</h6>
             <p>Bachelor of Science in Computer Science</p>
+            <button onclick="myFunction('925')" class="w3-button w3-block w3-center-align"><i class="fa fa-caret-down"></i></button>
+            <div id="925" class="w3-container w3-hide w3-margin">
+              <div class="w3-container  w3-cell w3-mobile">
+                <img src="/images/925.jpg" class="w3-border w3-padding" style="width:100%" />
+              </div>
+            </div>
             <hr>
           </div>
 
@@ -261,13 +331,28 @@
             <h5 class="w3-opacity"><b>electrictooth.io</b></h5>
             <h6 class="w3-text-teal"><i class="fa fa-database fa-fw w3-margin-right"></i>React/Node/SoundCloud API</h6>
             <p>Bachelor of Science in Computer Science</p>
+            <button onclick="myFunction('etb')" class="w3-button w3-block w3-center-align"><i
+                class="fa fa-caret-down"></i></button>
+            <div id="etb" class="w3-container w3-hide w3-margin">
+              <div class="w3-container  w3-cell w3-mobile">
+                <img src="/images/ETB.png" class="w3-border w3-padding" style="width:100%" />
+              </div>
+            </div>
             <hr>
+
           </div>
 
           <div class="w3-container">
             <h5 class="w3-opacity"><b>soundcontrolrecords.com</b></h5>
             <h6 class="w3-text-teal"><i class="fa fa-database fa-fw w3-margin-right"></i>React/SoundCloud API</h6>
             <p>Bachelor of Science in Computer Science</p>
+            <button onclick="myFunction('scr')" class="w3-button w3-block w3-center-align"><i
+                class="fa fa-caret-down"></i></button>
+            <div id="scr" class="w3-container w3-hide w3-margin">
+              <div class="w3-container  w3-cell w3-mobile">
+                <img src="/images/SCR.png" class="w3-border w3-padding" style="width:100%" />
+              </div>
+            </div>
             <hr>
           </div>
 
@@ -280,30 +365,17 @@
     </div>
 
     <!-- End Page Container -->
-  
+
   </div>
 
-    <footer class="w3-container w3-teal w3-center w3-margin-top"
-      style="display: none; min-height: 100px;" id="footer">
-      <p>Find me on social media.</p>
-      <i class="fa fa-github w3-hover-opacity" style="font-size: 50px; padding: 0 8px;"></i>
-      <i class="fa fa-linkedin w3-hover-opacity" style="font-size: 50px; padding: 0 8px;"></i>
-      <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
-    </footer>
+  <footer class="w3-container w3-teal w3-center w3-margin-top" style="display: none; min-height: 100px;" id="footer">
+    <p>Find me on social media.</p>
+    <i class="fa fa-github w3-hover-opacity" style="font-size: 50px; padding: 0 8px;"></i>
+    <i class="fa fa-linkedin w3-hover-opacity" style="font-size: 50px; padding: 0 8px;"></i>
+    <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+  </footer>
 
 </body>
-
-<style type="text/css">
-  li,
-  i {
-    padding: 4px 0;
-  }
-
-  * {
-    cursor: url(https://cur.cursors-4u.net/toons/too-11/too1009.ani), url(http://cur.cursors-4u.net/toons/too-11/too1009.png), auto !important;
-  }
-</style>
-
 <script>
   var req = new XMLHttpRequest();
   var video = document.getElementById('ocean');
@@ -331,6 +403,15 @@
   }
 
   req.send();
+
+  function myFunction(id) {
+    var x = document.getElementById(id);
+    if (x.className.indexOf("w3-show") == -1) {
+      x.className += " w3-show";
+    } else {
+      x.className = x.className.replace(" w3-show", "");
+    }
+  }
 </script>
 
 </html>
