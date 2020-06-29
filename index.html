@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<title>W3.CSS Template</title>
+<title>Welcome!</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -20,11 +20,13 @@
 </style>
 
 <body class="w3-light-grey">
-<video autoplay loop src='/images/ocean.mov' type='video/mov'
-      style="z-index: -1;object-fit: cover; left:50%; position:absolute; top:50%; transform:translate(-50%,-50%); min-width:100%; min-height:200%"></video>
   <!-- Page Container -->
-  <div class="w3-content w3-margin-top" style="max-width:1400px; position:relative">
-    
+  <div class="w3-content w3-margin-top" id="main" style="max-width:1400px; position:relative">
+    <video autoplay loop src='/images/ocean.mp4' id="ocean" type='video/mp4'
+      style="z-index: -1;object-fit: cover; left:50%; position:fixed; top:50%; transform:translate(-50%,-50%); min-width:100%; min-height:200%"></video>
+    <audio controls autoplay loop style="display:none;" id="waves">
+      <source src="/images/waves.mp3" type="audio/mpeg">
+    </audio>
     <!-- The Grid -->
     <div class="w3-row-padding">
 
@@ -96,31 +98,92 @@
         <div class="w3-container w3-card w3-white w3-margin-bottom">
           <h2 class="w3-text-grey w3-padding-16"><i
               class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Work Experience</h2>
+
+          <!-- springbox -->
           <div class="w3-container">
             <h5 class="w3-opacity"><b>Software Engineer / Springbox</b></h5>
             <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jul 2019 - Mar 2020</h6>
-            <p>Lorem ipsum dolor sit amet. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderit
-              sunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste.</p>
+            <ul class="fa-ul">
+              <li>
+                <i class="fa-li fa fa-square" style="color:#FAEADD"></i>
+                Wrote modern, performant, and robust code for a diverse array of
+                client and internal projects</li>
+              <li>
+                <i class="fa-li fa fa-square" style="color:#FAEADD">
+                </i>Worked with a variety of different languages and frameworks such as JavaScript, TypeScript, React,
+                Node.js, C#, etc.</li>
+              <li><i class="fa-li fa fa-square" style="color:#FAEADD"></i></i>Communicated and collaborated with
+                multi-disciplinary teams of
+                engineers, designers, producers, clients and stakeholders
+                on a daily basis</li>
+              <li><i class="fa-li fa fa-square" style="color:#FAEADD"></i></i>Clients included Atlassian, Whole Foods,
+                Polycom, AXA, and more</li>
+            </ul>
             <hr>
           </div>
+          <!-- modular -->
           <div class="w3-container">
             <h5 class="w3-opacity"><b>Front-End Engineer / Modular Inc</b></h5>
             <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Oct 2017 - Nov 2018</h6>
-            <p>Consectetur adipisicing elit. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderit
-              sunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste.</p>
+            <ul class="fa-ul">
+              <li>
+                <i class="fa-li fa fa-square" style="color:#FAEADD"></i>
+                Architected and implemented the front-end of Modular’s web and desktop application, which lets banks
+                offer digital
+                assets to their customers</li>
+              <li>
+                <i class="fa-li fa fa-square" style="color:#FAEADD">
+                </i>Worked closely with designers and management team to develop, document and manage the custom UI
+                library using React,
+                Styled-Component and Storybook</li>
+            </ul>
             <hr>
           </div>
+          <!-- santanna -->
+          <div class="w3-container">
+            <h5 class="w3-opacity"><b>Software Engineer / Santanna Energy Services</b></h5>
+            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>May 2014 - Mar 2015</h6>
+            <ul class="fa-ul">
+              <li>
+                <i class="fa-li fa fa-square" style="color:#FAEADD"></i>
+                Worked with the team to implement bonus and incentive features in the existing marketer payment system
+              </li>
+              <li>
+                <i class="fa-li fa fa-square" style="color:#FAEADD">
+                </i>Successfully transitioned the company's weather data import process with zero downtime/li>
+            </ul>
+            <hr>
+          </div>
+          <!-- compass -->
           <div class="w3-container">
             <h5 class="w3-opacity"><b>Application Support Engineer / CompassLearning</b></h5>
             <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>May 2014 - Mar 2015</h6>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+            <ul class="fa-ul">
+              <li>
+                <i class="fa-li fa fa-square" style="color:#FAEADD"></i>
+                Enhanced the reporting system by combining efficient SQL queries and automated tasks with PowerShell
+              </li>
+              <li>
+                <i class="fa-li fa fa-square" style="color:#FAEADD">
+                </i>Delivered a suite of tools which greatly reduced the amount of time needed to diagnose issues with
+                enterprise servers</li>
+            </ul>
             <hr>
           </div>
+          <!-- nwl -->
           <div class="w3-container">
             <h5 class="w3-opacity"><b>Software Engineer / National Western Life</b></h5>
             <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jan 2012 - Feb 2014</h6>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p><br>
+            <ul class="fa-ul">
+              <li>
+                <i class="fa-li fa fa-square" style="color:#FAEADD"></i>
+                Developed and maintained code in C#, SQL and PowerShell</li>
+              <li>
+                <i class="fa-li fa fa-square" style="color:#FAEADD">
+                </i>Reduced the build and deployment time for 3 software applications by 93%</li>
+            </ul><br>
           </div>
+
         </div>
 
         <div class="w3-container w3-card w3-white">
@@ -128,18 +191,25 @@
               class="fa fa-graduation-cap fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Education</h2>
 
           <div class="w3-container">
-            <h5 class="w3-opacity"><b>University of Texas at Brownsville</b></h5>
-            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2007 - 2011</h6>
-            <p>Bachelor of Science in Computer Science</p>
-            <hr>
+            <h5 class="w3-opacity"><b>Bachelor of Science in Computer Science</b></h5>
+            <h6 class="w3-text-teal">University of Texas at Brownsville <span>&#183;</span> 2007 - 2011</h6><br>
           </div>
+        </div><br>
+
+        <div class="w3-container w3-card w3-white">
+          <h2 class="w3-text-grey w3-padding-16"><i
+              class="fa fa-newspaper-o fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Publications</h2>
           <div class="w3-container">
-            <h5 class="w3-opacity"><b>Utah State University</b></h5>
-            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2011</h6>
-            <p>Computer Vision and Multi-Agent systems research.</p>
+            <h5 class="w3-opacity"><b>HISTOGRAMS OF ORIENTED GRADIENTS AND EIGENFACE CUES FOR FACE DETECTION</b></h5>
+            <h6 class="w3-text-teal">Utah State University, Department of Computer Science <span>&#183;</span> Published 2011</h6>
+            <h6 class="w3-text-teal"><i class="fa fa-external-link-square fa-fw w3-margin-right"></i><a
+                href="https://www.semanticscholar.org/paper/HISTOGRAMS-OF-ORIENTED-GRADIENTS-AND-EIGENFACE-CUES-Qi-Vera/705e76bdd528ac77c8f4550bde291e0311a804f4#references"
+                >VIEW</a></h6>
             <br>
           </div>
         </div><br>
+
+        <!-- https://www.semanticscholar.org/paper/HISTOGRAMS-OF-ORIENTED-GRADIENTS-AND-EIGENFACE-CUES-Qi-Vera/705e76bdd528ac77c8f4550bde291e0311a804f4#references -->
 
         <div class="w3-container w3-card w3-white">
           <h2 class="w3-text-grey w3-padding-16"><i
@@ -186,23 +256,24 @@
     <!-- End Page Container -->
   </div>
 
-  <footer class="w3-container w3-teal w3-center w3-margin-top">
+  <footer class="w3-container w3-teal w3-center w3-margin-top" style="min-height: 100px;">
     <p>Find me on social media.</p>
-    <i class="fa fa-facebook-official w3-hover-opacity"></i>
-    <i class="fa fa-instagram w3-hover-opacity"></i>
-    <i class="fa fa-snapchat w3-hover-opacity"></i>
-    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-    <i class="fa fa-twitter w3-hover-opacity"></i>
-    <i class="fa fa-linkedin w3-hover-opacity"></i>
+    <i class="fa fa-github w3-hover-opacity" style="font-size: 50px; padding: 0 8px;"></i>
+    <i class="fa fa-linkedin w3-hover-opacity" style="font-size: 50px; padding: 0 8px;"></i>
     <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
   </footer>
 
 </body>
 
+<style type="text/css">
+  li,
+  i {
+    padding: 4px 0;
+  }
+
+  * {
+    cursor: url(https://cur.cursors-4u.net/toons/too-11/too1009.ani), url(http://cur.cursors-4u.net/toons/too-11/too1009.png), auto !important;
+  }
+</style>
+
 </html>
-
-<!-- 
-
-
-
- -->
