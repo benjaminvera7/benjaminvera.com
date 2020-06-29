@@ -174,7 +174,7 @@
               <li><i class="fa-li fa fa-square" style="color:#FAEADD"></i></i>Clients included Atlassian, Whole Foods,
                 Polycom, AXA, and more</li>
             </ul>
-            <button onclick="myFunction('springbox')" class="w3-button w3-block w3-center-align"><i
+            <button onclick="toggle('springbox')" class="w3-button w3-block w3-center-align"><i
                 class="fa fa-caret-down"></i></button>
             <div id="springbox" class="w3-container w3-hide w3-margin">
               <div class="w3-container  w3-cell w3-mobile">
@@ -202,7 +202,7 @@
                 library using React,
                 Styled-Component and Storybook</li>
             </ul>
-            <button onclick="myFunction('modular')" class="w3-button w3-block w3-center-align"><i
+            <button onclick="toggle('modular')" class="w3-button w3-block w3-center-align"><i
                 class="fa fa-caret-down"></i></button>
             <div id="modular" class="w3-container w3-hide w3-margin">
               <div class="w3-container  w3-cell w3-mobile">
@@ -290,8 +290,9 @@
             <h5 class="w3-opacity"><b>electrictooth.app</b></h5>
             <h6 class="w3-text-teal"><i class="fa fa-database fa-fw w3-margin-right"></i>React/Node/MongoDB/PayPal/Web3
             </h6>
-            <p>Bachelor of Science in Computer Science</p>
-            <button onclick="myFunction('et')" class="w3-button w3-block w3-center-align"><i
+            <p>Web app built with React, Node.js, Express, PayPal and Ethereum for music streaming, payments and distribution of
+            digital music files</p>
+            <button onclick="toggle('et')" class="w3-button w3-block w3-center-align"><i
                 class="fa fa-caret-down"></i></button>
             <div id="et" class="w3-container w3-hide w3-margin">
               <div class="w3-container w3-mobile w3-margin-bottom">
@@ -317,8 +318,9 @@
             <h5 class="w3-opacity"><b>925.fm</b></h5>
             <h6 class="w3-text-teal"><i class="fa fa-database fa-fw w3-margin-right"></i>EJS/Node/oAuth/Google
               API/Stripe</h6>
-            <p>Bachelor of Science in Computer Science</p>
-            <button onclick="myFunction('925')" class="w3-button w3-block w3-center-align"><i class="fa fa-caret-down"></i></button>
+            <p>Web app built with EJS, Node.js, OAuth and Google Calendar API where DJs can schedule their own sets, stream
+            and get paid fairly</p>
+            <button onclick="toggle('925')" class="w3-button w3-block w3-center-align"><i class="fa fa-caret-down"></i></button>
             <div id="925" class="w3-container w3-hide w3-margin">
               <div class="w3-container  w3-cell w3-mobile">
                 <img src="/images/925.jpg" class="w3-border w3-padding" style="width:100%" />
@@ -330,8 +332,8 @@
           <div class="w3-container">
             <h5 class="w3-opacity"><b>electrictooth.io</b></h5>
             <h6 class="w3-text-teal"><i class="fa fa-database fa-fw w3-margin-right"></i>React/Node/SoundCloud API</h6>
-            <p>Bachelor of Science in Computer Science</p>
-            <button onclick="myFunction('etb')" class="w3-button w3-block w3-center-align"><i
+            <p>Music blog built with React.js & Soundcloud API. Hosted on Digital Ocean droplet running Node.js</p>
+            <button onclick="toggle('etb')" class="w3-button w3-block w3-center-align"><i
                 class="fa fa-caret-down"></i></button>
             <div id="etb" class="w3-container w3-hide w3-margin">
               <div class="w3-container  w3-cell w3-mobile">
@@ -344,9 +346,9 @@
 
           <div class="w3-container">
             <h5 class="w3-opacity"><b>soundcontrolrecords.com</b></h5>
-            <h6 class="w3-text-teal"><i class="fa fa-database fa-fw w3-margin-right"></i>React/SoundCloud API</h6>
-            <p>Bachelor of Science in Computer Science</p>
-            <button onclick="myFunction('scr')" class="w3-button w3-block w3-center-align"><i
+            <h6 class="w3-text-teal"><i class="fa fa-database fa-fw w3-margin-right"></i>React/Spotify API</h6>
+            <p>Record label website built with React.js & Spotify API. Hosted on Digital Ocean droplet running Node.js</p>
+            <button onclick="toggle('scr')" class="w3-button w3-block w3-center-align"><i
                 class="fa fa-caret-down"></i></button>
             <div id="scr" class="w3-container w3-hide w3-margin">
               <div class="w3-container  w3-cell w3-mobile">
@@ -369,9 +371,10 @@
   </div>
 
   <footer class="w3-container w3-teal w3-center w3-margin-top" style="display: none; min-height: 100px;" id="footer">
-    <p>Find me on social media.</p>
-    <i class="fa fa-github w3-hover-opacity" style="font-size: 50px; padding: 0 8px;"></i>
-    <i class="fa fa-linkedin w3-hover-opacity" style="font-size: 50px; padding: 0 8px;"></i>
+    <p>Find me</p>
+    <a href="https://github.com/bentooth"><i class="fa fa-github w3-hover-opacity" style="font-size: 50px; padding: 0 8px;"></i></a>
+    <a href="https://www.linkedin.com/in/benjamin-vera/"><i class="fa fa-linkedin w3-hover-opacity" style="font-size: 50px; padding: 0 8px;"></i></a>
+    <a href="mailto:contact@benjaminvera.com"><i class="fa fa-envelope w3-hover-opacity" style="font-size: 50px; padding: 0 8px;"></i></a>
     <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
   </footer>
 
@@ -398,13 +401,10 @@
       audio.play();
     }
   }
-  req.onerror = function () {
-    // Error
-  }
 
   req.send();
 
-  function myFunction(id) {
+  function toggle(id) {
     var x = document.getElementById(id);
     if (x.className.indexOf("w3-show") == -1) {
       x.className += " w3-show";
