@@ -73,15 +73,15 @@
 
 <body class="w3-light-grey">
 
-  <div id="loader"></div>
+  <!-- <div id="loader"></div> -->
   <!-- Page Container -->
   <div class="w3-content w3-margin-top w3-animate-opacity"
-    style="display: none; max-width:1400px; position:relative; text-align: left" id="myDiv">
-    <video autoplay preload loop id="ocean" type='video/mp4'
+    style="max-width:1400px;">
+    <!-- <video autoplay preload loop id="ocean" type='video/mp4'
       style="z-index: -1;object-fit: cover; left:50%; position:fixed; top:50%; transform:translate(-50%,-50%); min-width:100%; min-height:100%"></video>
     <audio controls loop style="display:none;" id="waves">
       <source src="/images/waves.mp3" type="audio/mpeg">
-    </audio>
+    </audio> -->
     <!-- The Grid -->
     <div class="w3-row-padding">
 
@@ -380,29 +380,29 @@
 
 </body>
 <script>
-  var req = new XMLHttpRequest();
-  var video = document.getElementById('ocean');
-  var audio = document.getElementById('waves');
-  req.open('GET', '/images/ocean.mp4', true);
-  req.responseType = 'blob';
+  // var req = new XMLHttpRequest();
+  // var video = document.getElementById('ocean');
+  // var audio = document.getElementById('waves');
+  // req.open('GET', '/images/ocean.mp4', true);
+  // req.responseType = 'blob';
 
-  req.onload = function () {
-    // Onload is triggered even on 404
-    // so we need to check the status code
-    if (this.status === 200) {
-      var videoBlob = this.response;
-      var vid = URL.createObjectURL(videoBlob); // IE10+
-      // Video is now downloaded
-      // and we can set it as source on the video element
-      video.src = vid;
-      document.getElementById("loader").style.display = "none";
-      document.getElementById("myDiv").style.display = "block";
-      document.getElementById("footer").style.display = "block";
-      audio.play();
-    }
-  }
+  // req.onload = function () {
+  //   // Onload is triggered even on 404
+  //   // so we need to check the status code
+  //   if (this.status === 200) {
+  //     var videoBlob = this.response;
+  //     var vid = URL.createObjectURL(videoBlob); // IE10+
+  //     // Video is now downloaded
+  //     // and we can set it as source on the video element
+  //     video.src = vid;
+  //     document.getElementById("loader").style.display = "none";
+  //     document.getElementById("myDiv").style.display = "block";
+  //     document.getElementById("footer").style.display = "block";
+  //     audio.play();
+  //   }
+  // }
 
-  req.send();
+  // req.send();
 
   function toggle(id) {
     var x = document.getElementById(id);
