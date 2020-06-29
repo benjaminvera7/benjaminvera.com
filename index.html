@@ -75,9 +75,9 @@
 
   <div id="loader"></div>
   <!-- Page Container -->
-  <div class="w3-content w3-margin-top animate-bottom" style="display: none; max-width:1400px; position:relative; text-align: left;" id="myDiv">
+  <div class="w3-content w3-margin-top animate-bottom" style="display: none; max-width:1400px; position:relative; text-align: left" id="myDiv">
     <video autoplay preload loop id="ocean" type='video/mp4'
-      style="z-index: -1;object-fit: cover; left:50%; position:fixed; top:50%; transform:translate(-50%,-50%); min-width:100%; min-height:200%"></video>
+      style="z-index: -1;object-fit: cover; left:50%; position:fixed; top:50%; transform:translate(-50%,-50%); min-width:100%; min-height:100%"></video>
     <audio controls autoplay loop style="display:none;" id="waves">
       <source src="/images/waves.mp3" type="audio/mpeg">
     </audio>
@@ -309,15 +309,16 @@
     </div>
 
     <!-- End Page Container -->
-      <footer class="w3-container w3-teal w3-center w3-margin-top" style="min-height: 100px;">
-        <p>Find me on social media.</p>
-        <i class="fa fa-github w3-hover-opacity" style="font-size: 50px; padding: 0 8px;"></i>
-        <i class="fa fa-linkedin w3-hover-opacity" style="font-size: 50px; padding: 0 8px;"></i>
-        <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
-      </footer>
-
+  
   </div>
 
+    <footer class="w3-container w3-teal w3-center w3-margin-top"
+      style="display: none; min-height: 100px;" id="footer">
+      <p>Find me on social media.</p>
+      <i class="fa fa-github w3-hover-opacity" style="font-size: 50px; padding: 0 8px;"></i>
+      <i class="fa fa-linkedin w3-hover-opacity" style="font-size: 50px; padding: 0 8px;"></i>
+      <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+    </footer>
 
 </body>
 
@@ -349,6 +350,7 @@
       video.src = vid;
       document.getElementById("loader").style.display = "none";
       document.getElementById("myDiv").style.display = "block";
+      document.getElementById("footer").style.display = "block";
     }
   }
   req.onerror = function () {
